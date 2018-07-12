@@ -1,1 +1,49 @@
-today is xingqisan
+1.建立一个自己的分支
+
+git branch mybranch
+
+此时可以使用git branch查看当前的分支情况，如不 出意外，则显示一个master一个mybranchi分支，而你当前在master分支上。
+
+
+
+2.切换到新建的分支
+
+git checkout mybranch
+
+此时我们就可以在myabranch随意的修改，这并不会影响刚才的主分支master。注意：以上全部操作都不影响远程仓库，都是本地的备份。
+
+
+
+3.假若我们已经在mybranch上做了很多修改。那么我们就可以在mybranch下进行commit
+
+git commit -m "i had do some thing in mybranch"
+
+
+
+4.此时我们回到原来的master分支
+
+git checkout master
+
+
+
+5.将之前在branch上的修改合并到master
+
+git merge mybranch
+
+
+
+6.此时mybranch分支对我们来说已经没用了，删除
+
+git branch -d mybranch
+
+
+
+7.此时我们可以一次性将本地master的修改(merge后的)push到远程
+
+git push
+
+
+
+注意：如果想新建和切换branch一次完成，可以
+
+git checkout -b branchname
