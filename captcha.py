@@ -35,11 +35,11 @@ class Login():
     def position(self):
         image=self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'geetest_canvas_img')))
         location=image.location
-        location['x']=int(location['x']*1.25)
-        location['y']=int(location['y']*1.25)
+        location['x']=location['x']
+        location['y']=location['y']
         size=image.size
-        size['height']=int(size['height']*1.25)
-        size['width']=int(size['width']*1.25)
+        size['height']=size['height']
+        size['width']=size['width']
         rangle = (int(location['x']), int(location['y']), int(location['x'] + size['width']),
           int(location['y'] + size['height']))
         return rangle
@@ -71,7 +71,7 @@ class Login():
         captche=self.image(rangle)
         width=captche.size[0]
         height=captche.size[1]
-        captche = captche.resize((int(width*0.8), int(height*0.8)),Image.ANTIALIAS)
+        #captche = captche.resize((int(width*0.8), int(height*0.8)),Image.ANTIALIAS)
         captche.save('a.png')
         return captche
 
