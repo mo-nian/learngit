@@ -81,7 +81,7 @@ class Login():
         captche=self.image(rangle)
         width=captche.size[0]
         height=captche.size[1]
-        captche = captche.resize((int(width*0.8), int(height*0.8)),Image.ANTIALIAS)
+        #captche = captche.resize((int(width*0.8), int(height*0.8)),Image.ANTIALIAS)
         captche.save('b.png')
         return captche
 
